@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <header class="bg-blue-800 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div class="flex items-center">
+                <img src="unfluke.png" alt="Logo" class="h-10 w-auto mr-4">
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">Leaderboard</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">Historical Trading</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">Historical Chart</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">Scanners</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">Alerts</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">Basic Backtest</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">Advanced Backtest</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">Pricing</a></li>
+                        <li><a href="#" class="text-white hover:text-gray-200 font-semibold">My Earnings</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-yellow-300 font-semibold">0</span>
+                <img src="avtar.jpg" alt="Avatar" class="h-10 w-10 rounded-full">
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Leaderboard</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-blue-800 text-white">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Rank</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Calmar Ratio</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Overall Profit</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Avg. Daily Profit</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Win %(Day)</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Price (Rs)</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="bg-gray-100 hover:bg-gray-200">
+                            <td class="px-6 py-4 whitespace-nowrap">1</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Selling with re entr</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-green-600">3.96</td>
+                            <td class="px-6 py-4 whitespace-nowrap">381845</td>
+                            <td class="px-6 py-4 whitespace-nowrap">319.54</td>
+                            <td class="px-6 py-4 whitespace-nowrap">0.65</td>
+                            <td class="px-6 py-4 whitespace-nowrap">-</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-blue-600 cursor-pointer">View</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-100">
+                            <td class="px-6 py-4 whitespace-nowrap">2</td>
+                            <td class="px-6 py-4 whitespace-nowrap">strategy_name</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-green-600">3.62</td>
+                            <td class="px-6 py-4 whitespace-nowrap">268872.5</td>
+                            <td class="px-6 py-4 whitespace-nowrap">216.31</td>
+                            <td class="px-6 py-4 whitespace-nowrap">0.64</td>
+                            <td class="px-6 py-4 whitespace-nowrap">500</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-green-600 cursor-pointer">Buy</td>
+                        </tr>
+                        <tr class="bg-gray-100 hover:bg-gray-200">
+                            <td class="px-6 py-4 whitespace-nowrap">3</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Based on premium and</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-green-600">3.42</td>
+                            <td class="px-6 py-4 whitespace-nowrap">255425</td>
+                            <td class="px-6 py-4 whitespace-nowrap">208.51</td>
+                            <td class="px-6 py-4 whitespace-nowrap">0.64</td>
+                            <td class="px-6 py-4 whitespace-nowrap">-</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-blue-600 cursor-pointer">View</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-100">
+                            <td class="px-6 py-4 whitespace-nowrap">4</td>
+                            <td class="px-6 py-4 whitespace-nowrap">strategy_name</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-green-600">3.22</td>
+                            <td class="px-6 py-4 whitespace-nowrap">370845</td>
+                            <td class="px-6 py-4 whitespace-nowrap">303.47</td>
+                            <td class="px-6 py-4 whitespace-nowrap">0.65</td>
+                            <td class="px-6 py-4 whitespace-nowrap">-</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-blue-600 cursor-pointer">View</td>
+                        </tr>
+                        <tr class="bg-gray-100 hover:bg-gray-200">
+                            <td class="px-6 py-4 whitespace-nowrap">5</td>
+                            <td class="px-6 py-4 whitespace-nowrap">strategy_name</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-green-600">3.22</td>
+                            <td class="px-6 py-4 whitespace-nowrap">370845</td>
+                            <td class="px-6 py-4 whitespace-nowrap">303.47</td>
+                            <td class="px-6 py-4 whitespace-nowrap">0.65</td>
+                            <td class="px-6 py-4 whitespace-nowrap">-</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-blue-600 cursor-pointer">View</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-100">
+                            <td class="px-6 py-4 whitespace-nowrap">6</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Based on premium wit</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-green-600">3.01</td>
+                            <td class="px-6 py-4 whitespace-nowrap">135980</td>
+                            <td class="px-6 py-4 whitespace-nowrap">185.77</td>
+                            <td class="px-6 py-4 whitespace-nowrap">0.49</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-indigo-600 cursor-pointer">View</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
